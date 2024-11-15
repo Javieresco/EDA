@@ -1,0 +1,28 @@
+import numpy as np
+import pandas as pd
+import matplotlib as plt
+import seaborn as sns
+
+# Revisar datasets disponibles.
+print(sns.get_dataset_names())
+
+# Cargar el dataset "tips".
+tips = sns.load_dataset('tips')
+
+# Mostrar las primeras filas.
+print(tips.head())
+
+# Información general del dataset.
+print(tips.info())
+
+# Estadísticas descriptivas:
+print(tips.describe().round(2))
+
+# Verificar valores nulos.
+print(tips.isnull().sum())
+
+¿Cuantas ventas realiza el restaurant por dia?
+
+# Contar las ventas de cada valor único en la columna 'day'
+day_counts = tips['day'].value_counts()
+print(day_counts)
